@@ -1,0 +1,43 @@
+{
+  "name": "node-boilerplate",
+  "version": "1.0.0",
+  "description": "node api boilerplate for CRUD",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "mocha 'test/**/*.js'",
+    "coverage": "set NODE_ENV=test && nyc --reporter=lcov --reporter=text mocha 'test/**/*.js'",
+    "dbUrl": "echo postgres://$(env-cmd printenv DB_USER):$(env-cmd printenv DB_PASS)@$(env-cmd printenv DB_HOST):$(env-cmd printenv DB_PORT)/$(env-cmd printenv DB_NAME)",
+    "setup": "npm install && npx sequelize-cli db:migrate --url $(npm run dbUrl --silent) && npx sequelize-cli db:seed:all --url $(npm run dbUrl --silent)"
+  },
+  "author": "Gavinda Kinandana <hai@gavinda.dev>",
+  "license": "ISC",
+  "dependencies": {
+    "awilix": "^4.3.3",
+    "awilix-express": "^4.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "env-cmd": "^10.1.0",
+    "eslint-plugin-mocha": "^8.0.0",
+    "express": "^4.17.1",
+    "http-status": "^1.5.0",
+    "log4js": "^6.3.0",
+    "mocha": "^8.3.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
+    "nyc": "^15.1.0",
+    "pg": "^8.5.1",
+    "sequelize": "^6.5.0",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1"
+  }
+}

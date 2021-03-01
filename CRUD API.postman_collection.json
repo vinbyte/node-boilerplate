@@ -1,0 +1,580 @@
+{
+	"info": {
+		"_postman_id": "3a5304cc-70de-444f-8829-92ab6f2cb238",
+		"name": "CRUD API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:2323/v1/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "2323",
+					"path": [
+						"v1",
+						"movies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "error live",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2323/v1/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "2323",
+							"path": [
+								"v1",
+								"movies"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "150"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-pOFngQhDbKyU6tQbaoadxjX0Ekw\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Feb 2021 15:56:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": 500,\n        \"message\": \"Internal server error\",\n        \"errors\": []\n    }\n}"
+				},
+				{
+					"name": "error dev",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2323/v1/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "2323",
+							"path": [
+								"v1",
+								"movies"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "150"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"96-pOFngQhDbKyU6tQbaoadxjX0Ekw\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Feb 2021 15:54:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": 500,\n        \"message\": \"Internal server error\",\n        \"errors\": [\n            {\n                \"reason\": \"TypeError\",\n                \"message\": \"this.movieRepository.listAll2 is not a function\"\n            }\n        ]\n    }\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2323/v1/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "2323",
+							"path": [
+								"v1",
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "958"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3be-2AS6LEA4Z+puypjfOMsLWRAcyLg\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Feb 2021 15:47:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"movies\": [\n            {\n                \"id\": 8,\n                \"title\": \"tes movie 3\",\n                \"desc\": \"desc movie 3\",\n                \"year\": 2021\n            },\n            {\n                \"id\": 7,\n                \"title\": \"tes movie 2\",\n                \"desc\": \"desc movie 2\",\n                \"year\": 2021\n            },\n            {\n                \"id\": 6,\n                \"title\": \"tes movie 1\",\n                \"desc\": \"desc movie 1\",\n                \"year\": 2021\n            },\n            {\n                \"id\": 5,\n                \"title\": \"Fast and Furious\",\n                \"desc\": \"Fast & Furious is a media franchise centered on a series of action films that are largely concerned with illegal street racing, heists and spies. The franchise also includes short films, a television series, live shows, video games and theme park attractions. It is distributed by Universal Pictures\",\n                \"year\": 2001\n            },\n            {\n                \"id\": 4,\n                \"title\": \"Iron Man\",\n                \"desc\": \"A billionaire industrialist and genius inventor, Tony Stark (Robert Downey Jr.), is conducting weapons tests overseas, but terrorists kidnap him to force him to build a devastating weapon. Instead, he builds an armored suit and upends his captors. Returning to America, Stark refines the suit and uses it to combat crime and terrorism.\",\n                \"year\": 2008\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "create movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "tes movie 4",
+							"type": "text"
+						},
+						{
+							"key": "desc",
+							"value": "desc movie 4",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:2323/v1/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "2323",
+					"path": [
+						"v1",
+						"movies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "tes movie 3",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "desc movie 3",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2021",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2323/v1/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "2323",
+							"path": [
+								"v1",
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "X-HTTP-Method-Override, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "83"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"53-njOJNC1rgBS7hFCUgoUrd2gaewU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Feb 2021 15:47:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"movie\": {\n            \"id\": 8,\n            \"title\": \"tes movie 3\",\n            \"desc\": \"desc movie 3\",\n            \"year\": 2021\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "detail movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:2323/v1/movies/15",
+					"host": [
+						"localhost"
+					],
+					"port": "2323",
+					"path": [
+						"v1",
+						"movies",
+						"15"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2323/v1/movies/10",
+							"host": [
+								"localhost"
+							],
+							"port": "2323",
+							"path": [
+								"v1",
+								"movies",
+								"10"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "376"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"178-or1mUGillFQX5cnpHdLhovXOuAk\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Feb 2021 16:10:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"movie\": {\n            \"id\": 10,\n            \"title\": \"Fast and Furious\",\n            \"desc\": \"Fast & Furious is a media franchise centered on a series of action films that are largely concerned with illegal street racing, heists and spies. The franchise also includes short films, a television series, live shows, video games and theme park attractions. It is distributed by Universal Pictures\",\n            \"year\": 2001\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "update movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "tes movie 4.1",
+							"type": "text"
+						},
+						{
+							"key": "desc",
+							"value": "desc movie 4.1",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:2323/v1/movies/18",
+					"host": [
+						"localhost"
+					],
+					"port": "2323",
+					"path": [
+						"v1",
+						"movies",
+						"18"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "tes movie 3.2",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "desc movie 3.2",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2021",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2323/v1/movies/10",
+							"host": [
+								"localhost"
+							],
+							"port": "2323",
+							"path": [
+								"v1",
+								"movies",
+								"10"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "X-HTTP-Method-Override, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5c-tXRLha01P7DWilT7SyOD8Qv70pk\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Feb 2021 16:39:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"movie\": {\n            \"id\": \"10\",\n            \"title\": \"tes movie 3.2\",\n            \"desc\": \"desc movie 3.2\",\n            \"year\": \"2021\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "delete movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:2323/v1/movies/18",
+					"host": [
+						"localhost"
+					],
+					"port": "2323",
+					"path": [
+						"v1",
+						"movies",
+						"18"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:2323/v1/movies/11",
+							"host": [
+								"localhost"
+							],
+							"port": "2323",
+							"path": [
+								"v1",
+								"movies",
+								"11"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "84"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"54-nsPrgN2sADGOCFNl0AdihAqjKNk\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 22 Feb 2021 16:49:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"movie\": {\n            \"id\": 11,\n            \"title\": \"tes movie 4\",\n            \"desc\": \"desc movie 4\",\n            \"year\": 2021\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
